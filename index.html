@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASTERO_ALEX - Twitch</title>
-    <link rel="icon" href="https://via.placeholder.com/32x32?text=sobaka.ng" type="image/png"> <!-- Иконка сайта -->
+    <link rel="icon" href="sobaka.png.jpg" type="image/png"> <!-- Иконка сайта -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -66,7 +66,7 @@
                 0 0 60px rgba(0, 224, 255, 0.2);
             width: 300px;
             height: 400px;
-            overflow: hidden;
+            overflow: auto; /* Включаем прокрутку */
             transition: transform 0.3s ease-in-out;
         }
 
@@ -152,12 +152,20 @@
             .main-container {
                 flex-direction: column; /* Размещаем блоки друг под другом */
                 align-items: center;
+                gap: 20px; /* Добавляем промежуток между секциями */
             }
 
             .stream-container, .chat-container {
                 width: 100%; /* Чат и стрим занимают всю доступную ширину */
                 height: 300px; /* Уменьшаем высоту для мобильных устройств */
-                margin-bottom: 20px; /* Добавляем отступ между секциями */
+            }
+
+            .chat-container {
+                height: 400px; /* Возвращаем высоту чата на мобильных устройствах */
+            }
+
+            .description-section {
+                width: 95%; /* Сделаем описание немного шире */
             }
         }
     </style>
@@ -178,7 +186,7 @@
             <iframe 
                 src="https://www.twitch.tv/embed/ASTERO_ALEX/chat?parent=asteroalex.netlify.app"
                 frameborder="0" 
-                scrolling="no" 
+                scrolling="auto" 
                 allowfullscreen>
             </iframe>
         </div>
