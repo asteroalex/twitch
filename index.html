@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASTERO_ALEX - Twitch</title>
-    <link rel="icon" href="sobaka.png.jpg" type="image/png"> <!-- Иконка сайта -->
+    <link rel="icon" href="https://via.placeholder.com/32x32?text=sobaka.ng" type="image/png"> <!-- Иконка сайта -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -56,7 +56,7 @@
         }
 
         .chat-container {
-            background: linear-gradient(145deg, #222222, #1e1e1e);
+            background: #181818; /* Темный фон */
             border-radius: 20px;
             padding: 10px;
             box-shadow: 
@@ -71,6 +71,10 @@
 
         .chat-container:hover {
             transform: scale(1.05);
+        }
+
+        .chat-container iframe {
+            background-color: #181818 !important; /* Применение темного фона */
         }
 
         footer {
@@ -154,10 +158,10 @@
             </iframe>
         </div>
 
-        <!-- Чат с темной темой -->
+        <!-- Чат -->
         <div class="chat-container">
             <iframe 
-                src="https://www.twitch.tv/embed/ASTERO_ALEX/chat?parent=asteroalex.netlify.app&theme=dark"
+                src="https://www.twitch.tv/embed/ASTERO_ALEX/chat?parent=asteroalex.netlify.app"
                 frameborder="0" 
                 scrolling="no" 
                 allowfullscreen>
