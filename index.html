@@ -28,6 +28,7 @@
             align-items: flex-start;
             gap: 30px;
             padding: 20px;
+            flex-wrap: wrap; /* Позволяет элементам располагаться друг под другом на маленьких экранах */
         }
 
         .stream-container {
@@ -144,6 +145,20 @@
             color: #ccc;
             font-size: 0.9rem;
             margin-top: 10px;
+        }
+
+        /* Медиазапрос для мобильных устройств */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column; /* Размещаем блоки друг под другом */
+                align-items: center;
+            }
+
+            .stream-container, .chat-container {
+                width: 100%; /* Чат и стрим занимают всю доступную ширину */
+                height: 300px; /* Уменьшаем высоту для мобильных устройств */
+                margin-bottom: 20px; /* Добавляем отступ между секциями */
+            }
         }
     </style>
 </head>
